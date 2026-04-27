@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explanation Page</title>
+
+    <!-- Load stylesheet:  -->
+    <link rel="stylesheet" type="text/css" href="css.css" />
+    <!-- Load Galindo Font:  -->
+    <link href="https://fonts.googleapis.com/css2?family=Galindo&display=swap" rel="stylesheet" />
+    
+</head>
+
+<body class="explanation" data-page="explanation">
+    <!-- Top sticky banner:  -->
+    <div class="banner">
+        <a href="index.html">
+        <img src="assets/pvz-logo.webp" alt="Plants VS Zombie Logo" width="100">
+        </a>
+        <h1>Code Explanations</h1>
+        <div class="banner-flex">
+            <a href="gameplay.html">General Gameplay</a>
+            <a href="plants.html">Plants</a>
+            <a href="zombies.html">Zombies</a>
+            <a href="modes.html">Game Modes</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="explanation.html">Explanations</a>
+        </div>
+    </div>
+          
+    <div class="wrapper">
+
+        <!-- Vertical tab buttons -->
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'html')" id="defaultOpen">HTML</button>
+            <button class="tablinks" onclick="openTab(event, 'css')">CSS</button>
+            <button class="tablinks" onclick="openTab(event, 'javascript')">JS</button>
+        </div>
+
+        <section id="html" class="tabcontent">
+            <h2>HTML Structure</h2>
+
+            <article>
+                <h3>Early Wireframe Design</h3>
+                <p>Before actually building the website, an early wireframe sketch was made to ensure concepts and goals are aligned.</p>
+                <figure>
+                    <img src="assets/Explanations/sitemap.jpeg" alt="Original site map of the website" width="100%">
+                    <figcaption>Fig 1. The first site map idea</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h3>Consistent Webpage Layout</h3>
+                <p>The website maintains consistency across all pages through shared banner and footer components. This creates a cohesive user experience and clear navigation structure.</p>
+                <figure>
+                    <img src="assets/Explanations/banner.png" alt="Screenshot of banner on top of each web page" width="100%">
+                    <figcaption>Fig 2. Same banner for every page</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/Explanations/footer.png" alt="Screenshot of footer at each web page" width="100%">
+                    <figcaption>Fig 3. Same footer for every page</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h3>Content Organization</h3>
+                <p>Each tutorial page follows a structured approach to present game information effectively.</p>
+                
+                <div class="feature-box">
+                    <h4>Content Structure Pattern:</h4>
+                    <ul>
+                        <li><strong>Overview sections</strong> - Introductory paragraphs explaining game concepts</li>
+                        <li><strong>Gallery articles</strong> - Visual presentation of game elements with descriptions</li>
+                        <li><strong>Card layouts</strong> - Individual character/item showcases with images and stats</li>
+                        <li><strong>Descriptive text formatting</strong> - Use of <code>&lt;strong&gt;</code> and <code>&lt;i&gt;</code> for emphasis</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article>
+                <h3>Semantic Containers</h3>
+                <p>The HTML uses semantic elements like <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;figure&gt;</code> to create meaningful document structure. This improves accessibility and SEO while making the code more maintainable.</p>
+
+                <div class="feature-box">
+                <h4>Key Semantic Elements Used:</h4>
+                <ul>
+                    <li><strong>&lt;main&gt;</strong> – Contains the primary content of each page</li>
+                    <li><strong>&lt;section&gt;</strong> – Groups related content together (HTML, CSS, JavaScript sections)</li>
+                    <li><strong>&lt;article&gt;</strong> – Self-contained content pieces within sections</li>
+                    <li><strong>&lt;figure&gt; & &lt;figcaption&gt;</strong> – Images with descriptive captions</li>
+                </ul>
+                </div>
+            </article>
+
+            <article>
+                <h3>Navigation and Layout</h3>
+                <p>The navigation bar within the <code>&lt;div class="banner"&gt;</code> provides intuitive links to each major section of the site. This enhances user experience by enabling easy access to relevant content such as gameplay instructions, plant and zombie guides, and quizzes.</p>
+
+                <div class="feature-box">
+                <h4>Navigation Features:</h4>
+                <ul>
+                    <li><strong>Clickable Logo</strong> – Returns the user to the homepage for quick orientation</li>
+                    <li><strong>Hyperlinks</strong> – Clearly labeled and grouped for fast access to key topics</li>
+                    <li><strong>Responsive Flex Layout</strong> – Maintains accessibility and structure across devices</li>
+                </ul>
+                </div>
+            </article>
+
+            <article>
+                <h3>Multimedia Integration</h3>
+                <p>Images and figures are embedded with appropriate <code>&lt;img&gt;</code> tags and <code>&lt;figcaption&gt;</code> elements to support visual learners and provide contextual meaning. Alt text ensures accessibility for screen readers.</p>
+
+                <div class="feature-box">
+                <h4>Effective Use of Media:</h4>
+                <ul>
+                    <li><strong>Illustrative Screenshots</strong> – Help users visually understand gameplay and characters</li>
+                    <li><strong>Alt Attributes</strong> – Enhance accessibility for users with visual impairments</li>
+                    <li><strong>Figures with Captions</strong> – Improve semantic clarity and content relevance</li>
+                </ul>
+                </div>
+            </article>
+
+        </section>
+
+
+        <section id="css" class="tabcontent">
+            <h2>CSS Styling</h2>
+                            
+            <article>
+            <h3>Single Shared CSS File</h3>
+            <p>
+                A single stylesheet is used to maintain consistency in design across all web pages. The CSS file is well-structured with clear comments separating general styling rules from page-specific sections.
+            </p>
+            <div class="feature-box">
+                <h4>Key Benefits:</h4>
+                <ul>
+                <li>Centralized styling ensures a unified look and feel.</li>
+                <li>Clear comments enhance readability and make future updates easier.</li>
+                <li>Reduces code duplication and improves site performance.</li>
+                </ul>
+            </div>
+            </article>
+
+            <article>
+            <h3>Use of Fonts</h3>
+            <p>
+                Typography plays a crucial role in creating a visually coherent and user-friendly interface. Carefully selected fonts are used to distinguish content types while maintaining harmony throughout the site.
+            </p>
+            <div class="feature-box">
+                <h4>Font Choices:</h4>
+                <ul>
+                <li><code>Galindo</code> – A decorative font applied to major headings for personality and visual flair.</li>
+                <li><code>Sans-Serif</code> – A clean, modern font used for body text to improve readability.</li>
+                <li>Consistent typography strengthens brand identity and page structure.</li>
+                <li>Limited font variety prevents visual clutter and maintains professionalism.</li>
+                </ul>
+            </div>
+            </article>
+
+            <article>
+            <h3>Use of Media and Images</h3>
+            <p>
+                Visual content is incorporated throughout the site to support understanding and increase engagement. Images serve both aesthetic and educational purposes, especially for new players unfamiliar with game elements.
+            </p>
+            <div class="feature-box">
+                <h4>Media Purposes:</h4>
+                <ul>
+                <li>Enhances comprehension by visually representing game mechanics and items.</li>
+                <li>Helps users identify plants, zombies, and gameplay scenarios.</li>
+                <li>Adds vibrancy to the pages, keeping them dynamic and inviting.</li>
+                <li>Improves overall user experience by reducing text-heavy content.</li>
+                </ul>
+            </div>
+            </article>
+
+            <article>
+                <h3>Enhanced User Interaction via Transitions and Hover Effects</h3>
+                <p>Micro-interactions like transitions and hover effects provide immediate visual feedback, reinforcing the interactive nature of the UI. These animations make the experience smoother and more intuitive, guiding the user's attention and encouraging engagement.</p>
+                <div class="feature-box">
+                    <h4>Interactive Feedback Examples:</h4>
+                    <ul>
+                    <li><strong>transition: transform 0.15s, border-radius 0.15s</strong> – Applies smooth animations when elements scale or change shape</li>
+                    <li><strong>.banner-flex a:hover</strong> – Highlights navigation links with hover styles such as shadows, underlines, or color shifts</li>
+                    <li><strong>aside img:hover</strong> – Slight zoom-in effect (<code>transform: scale(1.1)</code>) gives visual depth and indicates interactivity</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article>
+                <h3>Responsive Layouts with Flexbox & Media Queries</h3>
+                <p>The site adapts seamlessly across devices using responsive design principles. Flexbox is the primary layout engine for both structural and component-level design, while media queries ensure content margins remain comfortable on narrow screens.</p>
+                <div class="feature-box">
+                <h4>Responsive Techniques:</h4>
+                <ul>
+                    <li><strong>.banner-flex</strong> – Wraps navigation items into rows on small viewports</li>
+                    <li><strong>.card / .card1</strong> – Uses <code>display: flex</code> with <code>flex-wrap</code> for dynamic gallery grids</li>
+                    <li><strong>@media (max-width: 82em)</strong> – Adjusts <code>main</code> margins for consistent padding across devices</li>
+                </ul>
+                </div>
+            </article>
+
+            <article>
+                <h3>Sticky Header Navigation</h3>
+                <p>The header is pinned using modern positioning techniques, ensuring key navigation remains visible. This supports faster navigation and enhances the user experience, especially during long scroll sessions.</p>
+                <div class="feature-box">
+                <h4>Sticky Techniques:</h4>
+                <ul>
+                    <li><strong>position: sticky</strong> – Keeps the header fixed at the top during scroll</li>
+                    <li><strong>top: 0 + z-index</strong> – Ensures layering above other elements</li>
+                    <li><strong>scroll-padding-top</strong> – Offsets anchor targets to prevent content from being hidden</li>
+                </ul>
+                </div>
+            </article>
+
+            <article>
+                <h3>Global Variables & Custom Properties</h3>
+                <p>Custom properties centralize styling decisions, making the design scalable and easy to maintain. Updates to the theme can be made by adjusting a few global variables.</p>
+                <div class="feature-box">
+                <h4>Key Custom Properties:</h4>
+                <ul>
+                    <li><strong>--banner-color / --accent-color</strong> – Control highlight elements for visual identity</li>
+                    <li><strong>--background-color / --article-background</strong> – Maintain strong contrast for readability</li>
+                    <li><strong>--aside-background / --aside-font-color</strong> – Create clear, consistent side content sections</li>
+                </ul>
+                </div>
+            </article>
+
+            <article>
+                <h3>Typography & Visual Hierarchy</h3>
+                <p>A balanced typographic system supports readability and brand expression. Font weights, sizes, and spacing are adjusted to reflect importance and guide user attention across the page.</p>
+                <div class="feature-box">
+                <h4>Typography Highlights:</h4>
+                <ul>
+                    <li><strong>h1 with Galindo font</strong> – Gives personality to titles with a custom font</li>
+                    <li><strong>h2–h5 scaling</strong> – Defines clear levels of visual hierarchy</li>
+                    <li><strong>line-height, spacing, and text shadows</strong> – Enhance legibility and structure</li>
+                </ul>
+                </div>
+            </article>
+
+            <article>
+                <h3>Transitions & Hover Interactions</h3>
+                <p>Subtle transitions create a polished interface by providing responsive feedback. These effects improve user perception of speed and usability without being distracting.</p>
+                <div class="feature-box">
+                <h4>Interactive Details:</h4>
+                <ul>
+                    <li><strong>.banner-flex a:hover</strong> – Highlights navigation links with shadows and color changes</li>
+                    <li><strong>img:hover</strong> – Adds gentle scale transform to emphasize interactivity</li>
+                    <li><strong>transition: 0.15s–0.3s</strong> – Ensures quick, consistent animations</li>
+                </ul>
+                </div>
+            </article>
+
+        </section>
+
+
+        <section id="javascript" class="tabcontent">
+            
+            <h2>JavaScript Functionality & Quiz Logic</h2>
+
+            <article>
+                <h3>State Management & DOM References</h3>
+                <p>The script begins by defining key state variables and caching DOM elements for efficient access. This reduces repeated DOM queries and simplifies state updates.</p>
+                <div class="feature-box">
+                <h4>Key Elements:</h4>
+                <ul>
+                    <li><strong>let slides, currentSlide = 0, isReviewMode</strong> – Track quiz slides, active slide index, and review mode flag</li>
+                    <li><strong>document.getElementById(...)</strong> – Cache references to quiz container and control buttons</li>
+                </ul>
+                </div>
+            </article>
+
+            <article>
+                <h3>Question Data Structure</h3>
+                <p>Questions are stored in the <code>quizQuestions</code> array, with each question being an object containing all necessary information:</p>                
+                <div class="feature-box">
+                    <h4>Supported Question Types:</h4>
+                    <ul>
+                        <li><strong>MCQ:</strong> Multiple choice with radio buttons</li>
+                        <li><strong>Text:</strong> Free text input with case-insensitive matching</li>
+                        <li><strong>Number:</strong> Numeric input with exact matching</li>
+                        <li><strong>Date:</strong> Date picker input with exact matching</li>
+                    </ul>
+                </div>
+            </article>
+
+
+            <article>
+                <h3>Quiz Generation: <code>buildQuiz()</code></h3>
+                <p><code>buildQuiz()</code> dynamically constructs each question slide by iterating over <code>quizQuestions</code>. It handles multiple question types (MCQ, text, number, date) and injects HTML into the page.</p>
+                <div class="feature-box">
+                <h4>Technique Highlights:</h4>
+                <ul>
+                    <li><strong>Array.forEach()</strong> – Loops through question objects</li>
+                    <li><strong>Template literals</strong> – Build HTML strings for slides and answers</li>
+                    <li><strong>InnerHTML assignment</strong> – Renders all slides at once, then collects them into <code>slides</code></li>
+                </ul>
+                </div>
+            </article>
+
+            <article>
+                <h3>Slide Navigation: <code>showSlide()</code>, <code>showNextSlide()</code>, <code>showPreviousSlide()</code></h3>
+                <p>These functions manage which slide is visible by toggling the <code>.active-slide</code> class. Button visibility is updated based on the current slide and review mode.</p>
+                <div class="feature-box">
+                <h4>Navigation Logic:</h4>
+                <ul>
+                    <li><strong>classList.add/remove()</strong> – Show or hide slides</li>
+                    <li>Conditional <strong>style.display</strong> changes – Enable/disable navigation and action buttons</li>
+                    <li>Guard clauses for first, last, and results slides</li>
+                </ul>
+                </div>
+            </article>
+
+            <article>
+                <h3>Answer Validation: <code>compareAnswers()</code></h3>
+                <p>This function abstracts answer checking for all question types. It normalizes text inputs, converts number strings, and compares dates exactly.</p>
+                <div class="feature-box">
+                <h4>Validation Steps:</h4>
+                <ul>
+                    <li>Read user input via <code>querySelector</code> (radio or text input)</li>
+                    <li>Normalize and compare based on <code>question.type</code> (text, number, date)</li>
+                    <li>Return an object with <code>isCorrect</code> and <code>userAnswer</code></li>
+                </ul>
+                </div>
+            </article>
+
+            <article>
+                <h3>Scoring & Feedback: <code>showResults()</code></h3>
+                <p>Upon submission, the script tallies correct answers, prompts for unanswered questions, and displays a stylized results slide with an animated score and personalized message.</p>
+                <div class="feature-box">
+                <h4>Result Workflow:</h4>
+                <ul>
+                    <li>Count correct answers, collect unanswered indices</li>
+                    <li><strong>confirm()</strong> – Offer to revisit unanswered questions</li>
+                    <li>Generate results HTML with dynamic score and message</li>
+                    <li>Invoke <code>showSlide()</code> to display the final slide</li>
+                </ul>
+                </div>
+            </article>
+
+            <article>
+                <h3>Review Mode: <code>checkAns()</code></h3>
+                <p>Review mode locks inputs, highlights correct answers in green, and marks wrong answers in red. It also appends corrective hints for non-MCQ questions.</p>
+                <div class="feature-box">
+                <h4>Review Mode Features:</h4>
+                <ul>
+                    <li>Disable all inputs (<code>inp.disabled = true</code>)</li>
+                    <li>Apply inline styles to labels/inputs based on correctness</li>
+                    <li>Append correction notes for text, number, and date questions</li>
+                </ul>
+                </div>
+            </article>
+
+            <article>
+                <h3>Ending the Quiz: <code>backToHome()</code></h3>
+                <p>A confirmation dialog prevents accidental navigation away from the quiz. </p>
+                <div class="feature-box">
+                    <h4>User Safety Features:</h4>
+                    <ul>
+                        <li><strong>Confirmation Dialog:</strong> Warns user they will lose current progress</li>
+                        <li><strong>Clear Navigation:</strong> Direct link back to homepage when confirmed</li>
+                        <li><strong>Non-destructive:</strong> Canceling the dialog maintains quiz state</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article>
+                <h3>Event Handling System</h3>
+                <p>The quiz uses modern event listeners to handle user interactions:</p>
+                
+                <div class="code-block">
+                    // Navigation Events
+                    submitButton.addEventListener('click', showResults);
+                    previousButton.addEventListener("click", showPreviousSlide);
+                    nextButton.addEventListener("click", showNextSlide);
+                    backToHomeButton.addEventListener("click", backToHome);
+                    checkAnsButton.addEventListener("click", checkAns);
+                </div>
+                
+                <p>Each button has a specific role in the quiz flow, and the event listeners ensure proper function execution when users interact with the interface.</p>
+            </article>
+
+            <article>
+                <h3>Button Interactions</h3>
+                <p>
+                    Buttons control quiz flow and user interaction. Each button is assigned an <code>id</code> and tied to specific functions using <code>addEventListener</code>.
+                </p>
+                <div class="feature-box">
+                    <h4>Button Functions:</h4>
+                    <ul>
+                    <li><code>#previous</code> – Navigates to the previous question via <code>showPreviousSlide()</code></li>
+                    <li><code>#next</code> – Advances to the next question with <code>showNextSlide()</code></li>
+                    <li><code>#submit</code> – Submits all answers and shows results using <code>showResults()</code></li>
+                    <li><code>#checkAns</code> – Triggers review mode using <code>checkAns()</code> to highlight correct and incorrect responses</li>
+                    <li><code>#backToHome</code> – Confirms and redirects to home page via <code>backToHome()</code></li>
+                    </ul>
+                </div>
+            </article>
+
+            <article>
+                <h3>String Interpolation: <code>template literals</code></h3>
+                <p>
+                    Template literals using backticks (<code>`</code>) and <code>${}</code> enable dynamic HTML generation. They simplify insertion of variable values directly into strings.
+                </p>
+                <div class="feature-box">
+                    <h4>Usage Examples:</h4>
+                    <ul>
+                    <li>Generate unique IDs: <code>id="q${i}_${key}"</code></li>
+                    <li>Conditional rendering: <code>${question.image ? ... : ''}</code> for optional image display</li>
+                    <li>Dynamic result summary: <code>${numCorrect}/${quizQuestions.length}</code> in final feedback</li>
+                    <li>Warning message for unanswered: <code>${questionNumbers}</code> in a confirmation dialog</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article>
+                <h3>User Experience Features</h3>
+                
+                <div class="feature-box">
+                    <h4>Smart Navigation:</h4>
+                    <ul>
+                        <li><strong>Context-Aware Buttons:</strong> Previous/Next buttons appear only when relevant</li>
+                        <li><strong>Submit Protection:</strong> Submit button only appears on last question</li>
+                        <li><strong>Review Navigation:</strong> Different button layout during review mode</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-box">
+                    <h4>Feedback System:</h4>
+                    <ul>
+                        <li><strong>Immediate Visual Feedback:</strong> Colors and styling indicate correctness</li>
+                        <li><strong>Encouraging Messages:</strong> Personalized feedback based on performance</li>
+                        <li><strong>Progress Indication:</strong> Question numbers show quiz progress</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-box">
+                    <h4>Accessibility Considerations:</h4>
+                    <ul>
+                        <li><strong>Proper Labels:</strong> All inputs have associated labels</li>
+                        <li><strong>Alt Text:</strong> Images include descriptive alt attributes</li>
+                        <li><strong>Keyboard Navigation:</strong> Tab order follows logical flow</li>
+                        <li><strong>Color + Text:</strong> Visual feedback includes both color and text</li>
+                    </ul>
+                </div>
+            </article>
+
+            <h2>Comparison of Early Ideas VS the Final Quiz Page</h2>
+            <article>
+                <h3>Imagined quiz page</h3>
+                <div class="gallery-container">
+                    <img src="assets/Explanations/quiz-design1.webp" alt="Original design for the quiz question slide">
+                    <img src="assets/Explanations/quiz-design2.png" alt="Original design for the quiz question slide">
+                    <img src="assets/Explanations/quiz-design3.png" alt="Original design for the quiz results slide">
+                    <img src="assets/Explanations/quiz-design4.webp" alt="Original design for the quiz question slide">
+                </div>
+
+            </br>
+
+                <h3>Final quiz page</h3>
+                <div class="gallery-container">
+                    <img src="assets/Explanations/quiz-screenshot1.webp" alt="Original design for the quiz question slide">
+                    <img src="assets/Explanations/quiz-screenshot2.webp" alt="Original design for the quiz question slide">
+                    <img src="assets/Explanations/quiz-screenshot3.webp" alt="Original design for the quiz results slide">
+                    <img src="assets/Explanations/quiz-screenshot4.webp" alt="Original design for the quiz question slide">
+                </div>
+            </article>
+
+        </section>
+    </div>
+
+  <script src="javascript.js"></script>
+
+</body>
+
+</html>

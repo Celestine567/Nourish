@@ -1,0 +1,113 @@
+/* =============================================================================
+   GLOBAL STYLES & VARIABLES
+   ============================================================================= */
+   
+   body{
+     font-family: 'Elsie', serif;
+     background-color: var(--branding-color);
+   }
+
+   /* CSS Custom Properties - Color Palette */
+   :root {
+      --neutral-color: rgb(241, 248, 226);
+      --accent-color: rgb(84, 108, 189);
+      --branding-color: rgb(175, 80, 113);
+   }
+
+/* =============================================================================
+   TYPOGRAPHY
+   ============================================================================= */
+
+   h1{
+      font-size: 32px;
+      color: var(--neutral-color);
+   }
+    
+   .cream-cake{
+      font-family: 'cream cake';
+   }
+
+   p{
+      color: var(--neutral-color);
+   }
+
+
+/* =============================================================================
+   NAVIGATION & BANNER
+   ============================================================================= */
+   .common-banner{
+      background-color: var(--branding-color);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1em;
+      margin: 0;
+      padding: 10px 20px;
+      height: 80px;
+      position: sticky;
+      z-index: 1000;
+      top: 0;
+   }
+
+   .banner-flex{
+      margin-left: auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 1em;
+   }
+
+   .nourish-logo{
+      display: flex;
+      align-items: center;
+   }
+
+
+   /* =============================================================================
+   FOOTER
+   ============================================================================= */
+
+
+   /* =============================================================================
+   Homepage Layout
+   ============================================================================= */
+
+   /* Hero Section*/
+   .hero{
+      margin-top: 80px;
+      text-align: center;
+      position: relative;
+   }
+
+   .hero img{
+      width: 250px;
+      display: block;
+      margin: 0 auto;
+      top: 50%;
+      left: 50%;
+   }
+
+   .overlay-text{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+   }
+
+   .overlay-text h1{
+      font-size: 36px;
+      line-height: 1.2;
+   }
+
+   .hero a{
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 25px;
+      background: var(--branding-color);
+      color: var(--neutral-color);
+      border-radius: 20px;
+      cursor: pointer;
+   }
+
+

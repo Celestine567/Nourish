@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+
+  <!-- Load Elsie Font:  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Elsie:wght@400;900&display=swap" rel="stylesheet">
+  <!-- Load stylesheet:  -->
+  <link rel="stylesheet" type="text/css" href="css.css">
+</head>
+
+<body>
+  <!-- Top sticky banner:  -->
+  <header class="common-banner">
+    <div class="cart-logo"></div>
+    <div class="nourish-logo">
+      <a href="" title="nourish logo"><p class="cream-cake">Nourish</p></a>
+    </div>
+    <div class="banner-flex">
+        <a>Menu</a>
+        <a>Find us</a>
+        <a>Catering</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section-->
+    <section class="hero">
+      <img src="Assets/wirframe-home.png" alt="Homepage-image" width="100">
+      <div class="overlay-text">
+        <h1>INSPIRATION<br>NOURISH<br>EAT<br>SUSHI</h1>
+      </div>
+      <div class="start-button">
+        <a class="start-word">Start Order</a>
+        <img src="" alt="Send_hor">
+      </div>
+      <div class="scrolling-text">
+      </div>
+    </section>
+
+    <!-- Search box-->
+    <section class="search-section">
+      <h1>Search</h1>
+      <p class="subtitle">I am in the Nourish</p>
+        <form role="search" class="search-box">
+          <input type="search" placeholder="Type here"/>
+          <button type="submit"></button>
+        </form>
+
+      <div class="categories">
+        <div class="item">
+          <img src="Assets/Matcha Latte.webp" alt="Matcha_latte" width="100">
+          <p>Latte</p>
+        </div>
+        <div class="item">
+          <img src="Assets/Make Your Own Smoothie.webp" alt="Smoothie" width="100">
+          <p>Smoothie</p>
+        </div>
+        <div class="item">
+          <img src="Assets/Bowls.jpg" alt="Bowls" width="100">
+          <p>Bowls</p>
+        </div>
+        <div class="item">
+          <img src="Assets/Juice.webp" alt="Juice" width="100">
+          <p>Juice</p>
+        </div>
+        <div class="item">
+          <img src="Assets/Suhsi.webp" alt="Sushi" width="100">
+          <p>Sushi</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <h1>Our Best Galery From Customer</h1>
+      <p>Our best gallery from customers showcases real moments of people enjoying Nourish meals in 
+        their everyday lives. From vibrant bowls to wholesome ingredients, these shared experiences 
+        reflect the brand's commitment to fresh, nourishing food and a balanced lifestyle. 
+      </p>
+        <div class="gallery-image">
+          <img src="Assets/nut bar1.jpg" alt="nut_bar">
+          <img src="Assets/Acai Smoothie Bowl.webp" alt="smoothies">
+          <img src="Assets/Smashed Avo.webp" alt="toast">
+          <img src="Assets/Veg bowls.webp" alt="veg_bowls">
+        </div>
+    </section>
+
+    <section class="location">
+      <h1>Our Best Galery From Customer</h1>
+      <div class="location-cards">
+        <h3>Collingwood</h3>
+        <p>Located in Collingwood, this store offers fresh, vibrant healthy meals, including nourishing 
+          bowls, smoothies, and grab-and-go options, perfect for busy urban lifestyles.
+        </p>
+        <span class="heart" onclick="toggleHeart()"></span>
+      </div>
+      <div class="location-cards">
+        <h3>Echuca</h3>
+        <p>A community-focused store providing wholesome meals alongside catering services, making it an ideal
+           choice for local gatherings, events, and everyday healthy dining in a relaxed regional setting.
+        </p>
+        <span class="heart" onclick="toggleHeart()"></span>
+      </div>
+      <div class="location-cards">
+        <h3>Deniliquin</h3>
+        <p>Serving fresh, balanced meals made with quality ingredients, this location combines healthy food with
+           great coffee, supporting customers in maintaining a nutritious.
+        </p>
+        <span class="heart" onclick="toggleHeart()"></span>
+      </div>
+      <div class="location-cards">
+        <h3>Kyabram</h3>
+        <p>Known for its welcoming atmosphere, this store delivers wholesome meals and friendly service, 
+          creating a comfortable and relaxed dining experience for individuals and families.
+        </p>
+        <span class="heart" onclick="toggleHeart()"></span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <!-- Newsletter Section-->
+    <div class="newsletter">
+      <h1 class="elsie">Newsletter</h1>
+      <form role="email-address" class="subscribe">
+        <input type="email" placeholder="Your emial address">
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <!-- Nourish Summary Section-->
+    <div class="nourish-summary">
+      <h1 class="cream-cake">Nourish</h1>
+      <!-- Location Links-->
+      <div class="footer-loaction">
+        <a href="" title="Collingwood-location"><p class="elsie">Collingwood</p></a>
+        <a href="" title="Echuca-location"><p class="elsie">Echuca</p></a>
+        <a href="" title="Deniliquin-location"><p class="elsie">Deniliquin</p></a>
+        <a href="" title="Kyabram"><p class="elsie">Kyabram</p></a>
+      </div>
+      <!-- Social Links-->
+      <div class="Social Links">
+        <a href="Assets/ins.png" title="Instagram" class="instagram-icon"></a>
+        <a href="Assets/uber_eat.png" title="Uber-Eat" class="Uber-Eat-icon"></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
