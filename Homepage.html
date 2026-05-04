@@ -9,36 +9,48 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Elsie:wght@400;900&display=swap" rel="stylesheet">
+   <!-- Load Open Sans:  -->
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Load Cream Cake Font:  -->
+  <link href="https://fonts.cdnfonts.com/css/mervale-script" rel="stylesheet">          
   <!-- Load stylesheet:  -->
   <link rel="stylesheet" type="text/css" href="css.css">
 </head>
 
-<body>
+<body class="home">
   <!-- Top sticky banner:  -->
-  <header class="common-banner">
-    <div class="cart-logo"></div>
-    <div class="nourish-logo">
-      <a href="" title="nourish logo"><p class="cream-cake">Nourish</p></a>
+  <header>
+    <div class="main-header nav-left">
+      <a>Menu</a>
+      <a>Find us</a>
+      <a>Catering</a>
     </div>
-    <div class="banner-flex">
-        <a>Menu</a>
-        <a>Find us</a>
-        <a>Catering</a>
+    <div class="logo">
+      <a href="Homepage.html" title="nourish logo">Nourish</a>
+    </div>
+    <div class="nav-right">
+      <img src="Assets/cart-white.png" alt="cart-icon">
+      <img src="Assets/profile-white.png" alt="profile-icon">
+    </div>
+
     </div>
   </header>
 
   <main>
     <!-- Hero Section-->
     <section class="hero">
-      <img src="Assets/wirframe-home.png" alt="Homepage-image" width="100">
+
+      <img class="hero-bg" src="Assets/wirframe-home.png" alt="homepage-background">
+
       <div class="overlay-text">
-        <h1>INSPIRATION<br>NOURISH<br>EAT<br>SUSHI</h1>
-      </div>
+        <h1>INSPIRATION<br>
+          NOURISH<br>
+          EAT<br>
+          SUSHI</h1>
+
       <div class="start-button">
         <a class="start-word">Start Order</a>
-        <img src="" alt="Send_hor">
       </div>
-      <div class="scrolling-text">
       </div>
     </section>
 
@@ -48,10 +60,12 @@
       <p class="subtitle">I am in the Nourish</p>
         <form role="search" class="search-box">
           <input type="search" placeholder="Type here"/>
-          <button type="submit"></button>
+          <button type="submit">
+            <img src="Assets/Search.png" alt="search">
+          </button>
         </form>
 
-      <div class="categories">
+      <div class="categories-home">
         <div class="item">
           <img src="Assets/Matcha Latte.webp" alt="Matcha_latte" width="100">
           <p>Latte</p>
@@ -92,32 +106,42 @@
     <section class="location">
       <h1>Our Best Galery From Customer</h1>
       <div class="location-cards">
-        <h3>Collingwood</h3>
-        <p>Located in Collingwood, this store offers fresh, vibrant healthy meals, including nourishing 
+        <div>
+          <h3>Collingwood</h3>
+          <p>Located in Collingwood, this store offers fresh, vibrant healthy meals, including nourishing 
           bowls, smoothies, and grab-and-go options, perfect for busy urban lifestyles.
-        </p>
-        <span class="heart" onclick="toggleHeart()"></span>
-      </div>
-      <div class="location-cards">
-        <h3>Echuca</h3>
-        <p>A community-focused store providing wholesome meals alongside catering services, making it an ideal
+          </p>
+          <span class="heart" onclick="toggleHeart(this)">
+            <img src="Assets/Vector 15.svg">
+          </span>
+        </div>
+        <div>
+          <h3>Echuca</h3>
+          <p>A community-focused store providing wholesome meals alongside catering services, making it an ideal
            choice for local gatherings, events, and everyday healthy dining in a relaxed regional setting.
-        </p>
-        <span class="heart" onclick="toggleHeart()"></span>
-      </div>
-      <div class="location-cards">
-        <h3>Deniliquin</h3>
-        <p>Serving fresh, balanced meals made with quality ingredients, this location combines healthy food with
+          </p>
+          <span class="heart" onclick="toggleHeart(this)">
+            <img src="Assets/Vector 15.svg">
+          </span>
+        </div>
+        <div>
+          <h3>Deniliquin</h3>
+          <p>Serving fresh, balanced meals made with quality ingredients, this location combines healthy food with
            great coffee, supporting customers in maintaining a nutritious.
-        </p>
-        <span class="heart" onclick="toggleHeart()"></span>
-      </div>
-      <div class="location-cards">
-        <h3>Kyabram</h3>
-        <p>Known for its welcoming atmosphere, this store delivers wholesome meals and friendly service, 
+          </p>
+          <span class="heart" onclick="toggleHeart(this)">
+            <img src="Assets/Vector 15.svg">
+          </span>
+        </div>
+        <div>
+          <h3>Kyabram</h3>
+          <p>Known for its welcoming atmosphere, this store delivers wholesome meals and friendly service, 
           creating a comfortable and relaxed dining experience for individuals and families.
-        </p>
-        <span class="heart" onclick="toggleHeart()"></span>
+          </p>
+          <span class="heart" onclick="toggleHeart(this)">
+            <img src="Assets/Vector 15.svg">
+          </span>
+        </div>
       </div>
     </section>
   </main>
@@ -127,7 +151,7 @@
     <div class="newsletter">
       <h1 class="elsie">Newsletter</h1>
       <form role="email-address" class="subscribe">
-        <input type="email" placeholder="Your emial address">
+        <input type="email" placeholder="Your email address">
         <button type="submit">Subscribe</button>
       </form>
     </div>
@@ -149,5 +173,19 @@
       </div>
     </div>
   </footer>
+
+
+  <script>
+    function toggleHeart(heart){
+      const img = heart.querySelector('img');
+      if(heart.classList.contains('active')){
+        heart.classList.remove('active');
+        img.src = 'Assets/Vector 15.svg';
+      }else{
+        heart.classList.add('active');
+        img.src = 'Assets/heart-filled.svg';
+      }   
+    }
+  </script>
 </body>
 </html>

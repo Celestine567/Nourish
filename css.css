@@ -1,10 +1,12 @@
 /* =============================================================================
    GLOBAL STYLES & VARIABLES
    ============================================================================= */
-   
    body{
      font-family: 'Elsie', serif;
      background-color: var(--branding-color);
+     padding: 0;
+     margin: 0;
+     text-decoration: none;
    }
 
    /* CSS Custom Properties - Color Palette */
@@ -17,86 +19,277 @@
 /* =============================================================================
    TYPOGRAPHY
    ============================================================================= */
-
    h1{
       font-size: 32px;
       color: var(--neutral-color);
-   }
-    
-   .cream-cake{
-      font-family: 'cream cake';
    }
 
    p{
       color: var(--neutral-color);
    }
 
-
 /* =============================================================================
    NAVIGATION & BANNER
    ============================================================================= */
-   .common-banner{
+   .home .main-header{
       background-color: var(--branding-color);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 1em;
-      margin: 0;
-      padding: 10px 20px;
-      height: 80px;
+      color: var(--neutral-color);
       position: sticky;
+   }
+
+   .product .main-header{
+      background-color: var(--neutral-color);
+      color: var(--branding-color);
+      border-bottom: 1.5px solid var(--branding-color);
+   }
+
+   /* ========= Main header, sticky at the top ========= */
+   .main-header{
+      background-color: var(--branding-color);
+      color: var(--neutral-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0;
+      padding: 15px;
+      text-decoration: none;
+      border-bottom: 1.5px solid var(--neutral-color);
+      
       z-index: 1000;
       top: 0;
    }
 
-   .banner-flex{
-      margin-left: auto;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      gap: 1em;
+   .main-header img{
+      width: 25px;
+      height: 25px;
+      object-fit: contain;
    }
 
-   .nourish-logo{
+   .nav-left,
+   .nav-right{
       display: flex;
-      align-items: center;
+      gap: 20px;
    }
 
+   .logo{
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+   }
+
+   .logo a {
+      text-decoration: none;
+      font-family: “Mervale Script”, cursive;
+      font-size: 32px;
+      letter-spacing: 2px;
+      color: inherit;
+   }
+
+   /* ========= Subheader ========= */
+   .subheader{
+      width: 100%;
+   }
+
+   .category-navbar{
+      max-width: 2000px;
+      margin: 0 auto;
+      padding: 0px 15px;
+      background-color: var(--neutral-color);
+   }
+   
+   .nav-pill{
+      display: flex;
+      justify-content: flex-start;
+      gap: 30px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+   }
+
+   .nav-item {
+      margin: 10px;
+      border-radius: 999px;
+      color: var(--branding-color);
+      cursor: pointer;
+      font-family: 'Elsie', serif;
+      position: relative;
+    }
+
+    .pill-indicator{
+      position: absolute;
+      background: var(--accent-color);
+    }
 
    /* =============================================================================
    FOOTER
    ============================================================================= */
+   footer{
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 120px;
+      background-color: var(--neutral-color);
+      flex-wrap: wrap;
+      font-family: 'Elsie', serif;
+   }
 
+   /* ========= Left Side-Nesletter ========= */
+   .newsletter{
+      flex: 1;
+      min-width: 280px;
+   }
+
+   .newsletter h1{
+      font-size: 48px;
+      color: var(--branding-color);
+   }
+
+   .subscribe{
+      display: flex;
+      align-items: center;
+      max-width: 320px;
+   }
+
+   .subscribe input{
+      flex: 1;
+      background-color: var(--neutral-color);
+      border: none;
+      border-bottom: 2px solid var(--branding-color);
+      outline: none;
+      padding: 10px 0;
+      font-size: 14px;
+   }
+
+   .subscribe input::placeholder{
+      color: var(--branding-color);
+      opacity: 50%;
+    }
+
+   .subscribe button{
+      background-color: var(--branding-color);
+      color: var(--neutral-color);
+      font-size: 14px;
+      font-family: 'Elsie', serif;;
+      padding: 10px 20px;
+      border: 1px solid var(--branding-color);
+      cursor: pointer;
+   }
+
+   /* ========= Right Side - Nourish ========= */
+   .nourish-summary{
+      flex: 1;
+      min-width: 280px;
+   }
+
+   .nourish-summary h1{
+      color: var(--branding-color);
+      padding-top: 25px;
+      font-family: “Mervale Script”, cursive;
+   }
 
    /* =============================================================================
-   Homepage Layout
+   Responsive
    ============================================================================= */
-
-   /* Hero Section*/
-   .hero{
-      margin-top: 80px;
+   
+   /* =============================================================================
+   Search Section
+   ============================================================================= */ 
+   .search-section{
       text-align: center;
+      padding: 60px 20px;
+      font-family: 'Elsie', serif;
+      color: var(--neutral-color);
+    }
+
+    .search-section h1{
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle{
+      font-size: 18px;
+      font-family: “Mervale Script”, cursive;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+
+    /* ========= Search box ========= */
+    .search-box{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .search-box input{
+      width: 80%;
+      max-width: 1200px;
+      padding: 15px 20px;
+      margin-bottom: 0px;
+      border-radius: 30px;
+      border: none;
+      background-color: var(--neutral-color);
+      font-size: 18px;
+      font-family: 'Elsie', serif;
+      color: var(--branding-color);
+    }
+
+    .search-box input::placeholder{
+      color: var(--branding-color);
+      opacity: 50%;
+    }
+
+    .search-box button{
+      width: 45px;
+      height: 45px;
+      margin-left: -50px;
+      border-radius: 50%;
+      border: none;
+      background-color: var(--accent-color);
+      cursor: pointer;
+    }
+    .search-box button img{
+      width: 30px;
+      height: 30px;
+      margin-top: 4px;
+    }
+
+   /* =============================================================================
+   Homepage
+   ============================================================================= */
+   /* ========= Hero Section ========= */
+   .hero{
+      background-color: var(--branding-color) ;
       position: relative;
+      padding: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
    }
 
    .hero img{
-      width: 250px;
-      display: block;
-      margin: 0 auto;
-      top: 50%;
-      left: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      object-fit: cover;
+      z-index: 0;
    }
 
+    /* ========= Overlay text ========= */
    .overlay-text{
       position: absolute;
+      z-index: 2;
+      text-align: center;
       top: 50%;
       left: 50%;
+      transform: translate(-50%, -50%);
    }
 
    .overlay-text h1{
-      font-size: 36px;
+      font-size: 48x;
       line-height: 1.2;
    }
 
@@ -110,4 +303,186 @@
       cursor: pointer;
    }
 
+   /* ========= Start Button ========= */
+   .start-button{
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 28px;
+      border-radius: 999px;
+      color: var(--branding-color);
+      cursor: pointer;
+   }
 
+    /* ========= Search categories ========= */
+    .categories-home{
+      display: flex;
+      justify-content: center;
+      gap: 70px;
+      overflow-x:auto;
+      padding: 20px 0;
+    }
+
+    .item{
+      text-align: center;
+    }
+
+    .item img{
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .item p{
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    /* ========= Gallery section ========= */
+    .gallery{
+      padding: 60px 120px;
+      color: var(--neutral-color);
+    }
+
+    .gallery h1{
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .gallery p{
+      max-width: 900px;
+      line-height: 1.25;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .gallery-image{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .gallery-image img{
+      width: calc(25% - 20px);
+      min-width: 200px;
+    }
+
+     /* ========= Location section ========= */
+     .location{
+      padding: 60px 120px;
+     }
+
+     .location h1{
+      text-align: right;
+      margin-top: 30px;
+     }
+
+     .location-cards{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      }
+
+     .location-cards > div{
+      width: 200px;
+      height: 500px;
+      border: 2px solid var(--accent-color);
+      border-radius: 12px;
+      padding: 15px;
+      background-color: var(--neutral-color);
+      color: var(--branding-color);
+      text-align: center;
+     }
+
+     .location-cards p{
+      color: var(--branding-color);
+      font-family: 'Open Sans', sans-serif;
+      margin-top: 30px;
+      padding: 15px;
+     }
+
+     .heart img{
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      transition: 0.3s;
+     }
+
+     /* =============================================================================
+   Product List Page
+   ============================================================================= */
+   .menu{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 20px;
+      padding: 20px;
+   }
+
+   .lattes-product{
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+   .lattes-product h1{
+      font-size: 48px;
+      margin: 0;
+   }
+
+   .product-card{
+      display: flex;
+      height: 200px;
+      border-radius: 12px;
+      border: 2px solid var(--neutral-color);
+      background: var(--branding-color);
+   }
+
+   .product-card img {
+      width: 35%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .product-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      flex: 1;
+    }
+
+    .product-details h2{
+      font-size: 16px;
+      padding-left: 20px;
+      font-size: 28px;
+      color: var(--neutral-color);
+    }
+
+    .product-details p{
+      padding-left: 20px;
+      color: var(--neutral-color);
+    }
+    
+    .add-button {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: var(--accent-color);
+      color: var(--neutral-colors);
+      padding: 6px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+    
+    .add-button h3 {
+      margin: 0;
+      font-size: 14px;
+    }
+   
+
+   
+ 
+ 
+ 
