@@ -168,6 +168,7 @@
     </div>
   </div>
   <script>
+    /* product quantity */
     function increase(id){
       let qty = document.getElementById(id);
       let current = Number(qty.innerText);
@@ -182,16 +183,14 @@
       }
     }
 
+    /* Select button */
     function toggleSelect(button){
       button.classList.toggle('active');
     }
 
+    /* popup card */
     function openPopup(){
-      document.getElementById('popup').style.display = 'flex';
-    }
-
-    function closePopup(){
-      document.getElementById('popup').style.display = 'none';
+      document.getElementById('popup').style.display='flex';
     }
 
   </script>

@@ -26,8 +26,10 @@
       <a href="Homepage.html" title="nourish logo">Nourish</a>
     </div>
     <div class="nav-right">
-      <img src="Assets/cart-purple.png" alt="cart-icon">
-      <img src="Assets/profile-purple.png" alt="profile-icon">
+      <a href="Cart.html">
+        <img src="Assets/cart-white.png" alt="cart-icon">
+      </a>
+      <img src="Assets/profile-white.png" alt="profile-icon">
     </div>
   </div>
 
@@ -55,29 +57,47 @@
       </div>
 
       <div class="product-options">
-          <div class="size">
-            <h2>Size</h2>
-            <div class="option-card">
-              <p>Small<br> $7.00</p>
-              <p>Medium<br> $8.00</p>
-              <p>Large<br> $9.00</p>
-            </div>
+        <div class="size">
+          <h2>Size</h2>
+          <div class="option-card">
+            <label class="option">
+              <input type="radio" name="size" value="small">
+              Small<br> $7.00
+            </label>
+            <label class="option">
+              <input type="radio" name="size" value="medium">
+              Medium<br> $8.00
+            </label>
+            <label class="option">
+              <input type="radio" name="size" value="large">
+              Large<br> $9.00
+            </label>
           </div>
+        </div>
   
           <div class="milk">
             <h2>Milk</h2>
             <div class="option-card">
-              <p>Regular<br> $0.00</p>
-              <p>Oat<br> $0.50</p>
+              <label class="option">
+                <input type="radio" name="size" value="small">
+                Regular<br> $0.00
+              </label>
+              <label class="option">
+                <input type="radio" name="size" value="small">
+                Oat<br> $0.50
+              </label>
             </div>
           </div>
         </div>
       
       <div class="place-button">
-        <h1> Place Order</h1>
+        <a href="Cart.html">
+          Place Order
+        </a>
+        <!-- price
         <div class="total-price">
           <p>$8.00</p>
-        </div>
+        </div>-->
       </div>
     </div>
        
@@ -95,6 +115,9 @@
       <img src="" alt="">
     </section>
   
+    <script>
+    
+    </script>
 
 </body>
 </html>

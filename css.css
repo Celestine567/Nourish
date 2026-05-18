@@ -225,6 +225,38 @@
    }
 
    /* =============================================================================
+   Button-hover-animation
+   ============================================================================= */
+   .add-button:hover{
+      border: 2px solid var(--accent-color);
+   }
+
+   .option:hover{
+      border: 2px solid var(--accent-color);
+   }
+
+   /* hide default radio */
+   .option input{
+      display: none;
+   }
+
+   .option:has(input:checked){
+      border: 2px solid var(--accent-color);
+   }
+
+   .item img:hover{
+      border-color: var(--neutral-color);
+   }
+
+   .gallery-image img:hover{
+      border-color: var(--neutral-color);
+   }
+
+   
+
+    
+
+   /* =============================================================================
    Responsive
    ============================================================================= */
    
@@ -253,6 +285,7 @@
 
     /* ========= Search box ========= */
     .search-box{
+      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -261,7 +294,7 @@
     .search-box input{
       width: 80%;
       max-width: 1200px;
-      padding: 15px 20px;
+      padding: 15px 20px 15px 20px;
       margin-bottom: 0px;
       border-radius: 30px;
       border: none;
@@ -281,19 +314,23 @@
     }
 
     .search-box button{
+      position: absolute;
+      right: 10.5%;
       width: 45px;
       height: 45px;
-      margin-left: -50px;
       border-radius: 50%;
       border: none;
       background-color: var(--accent-color);
       cursor: pointer;
     }
+    
     .search-box button img{
       width: 30px;
       height: 30px;
       margin-top: 4px;
     }
+
+    
 
    /* =============================================================================
    Homepage
@@ -368,6 +405,7 @@
       display: flex;
       justify-content: center;
       margin-top: 180px;
+      text-decoration: none;
    }
    
    .word{
@@ -453,10 +491,6 @@
       transition: border-color 0.3s ease;
     }
 
-    .item img:hover{
-      border-color: var(--neutral-color);
-    }
-
     .item p{
       margin-top: 10px;
       font-size: 18px;
@@ -491,10 +525,6 @@
       border-radius: 5px;
       border: 2px solid transparent;
       transition: border-color 0.3s ease;
-    }
-
-    .gallery-image img:hover{
-      border-color: var(--neutral-color);
     }
 
      /* ========= Location section ========= */
@@ -573,7 +603,7 @@
       background: var(--branding-color);
 
       min-height: 200px;
-      overflow: hidden;
+
    }
 
    .product-card img {
@@ -581,6 +611,7 @@
       height: 100%;
       object-fit: cover;
       object-position: center;
+      border-radius: 10px;
     }
 
     .product-details {
@@ -598,7 +629,6 @@
       font-size: 28px;
       font-weight: normal;
       color: var(--neutral-color);
-
       margin: 0;
       overflow-wrap: break-word;
     }
@@ -612,9 +642,6 @@
       position: inherit;
       bottom: 20px;
       left: 20px;
-    }
-    
-    .add-button h3 {
       margin: 0;
       font-size: 20px;
       font-weight: normal;
@@ -623,6 +650,8 @@
       padding: 10px 25px;
       border-radius: 999px;
       cursor: pointer;
+      text-decoration: none;
+      border: 2px solid transparent;
     }
 
     /* =============================================================================
@@ -650,7 +679,7 @@
    }
    
    .product-info h1{
-      font-size: 72px;
+      font-size: 48px;
       font-weight: normal;
       margin: 0;
       color: var(--neutral-color);
@@ -686,7 +715,7 @@
    .size h2,
    .milk h2{
       margin: 0;
-      font-size: 40px;
+      font-size: 20px;
       font-weight: normal;
       color: var(--neutral-color);
    }
@@ -696,63 +725,54 @@
       gap: 24px;
       flex-wrap: wrap;
    }
-
-   .option-card p{
+    
+   .option{
       background-color: var(--neutral-color);
       padding: 18px 28px;
       border-radius: 8px;
       min-width: 120px;
-
-      font-size: 24px;
+      font-size: 20px;
       line-height: 1.4;
       color: var(--branding-color);
-
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-
       cursor: pointer;
-      transition: 0.3s;
+      border: 2px solid transparent;
+      display: inline-block;
    }
 
-   .option-card p:hover{
-      transform: translateY(-3px);
-   }
 
    .place-button{
       margin-top: 80px;
-  
       background-color: var(--neutral-color);
-  
       display: flex;
       justify-content: space-between;
       align-items: center;
-  
       padding: 14px 18px;
       border-radius: 10px;
-  }
+   }
   
-  .place-button h1{
+   .place-button a{
       margin: 0 auto;
-      font-size: 42px;
+      font-size: 28px;
       font-weight: normal;
       color: var(--branding-color);
-  }
+      text-decoration: none;
+   }
 
-  .total-price{
-   background-color: #6d7ed1;
+   .total-price{
+      background-color: var(--accent-color);
+      padding: 8px 18px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+   
 
-   padding: 8px 18px;
-   border-radius: 999px;
-
-   display: flex;
-   align-items: center;
-   justify-content: center;
-}
-
-.total-price p{
-   margin: 0;
-   color: white;
-   font-size: 28px;
-}
+  .total-price p{
+      margin: 0;
+      color: var(--branding-color);
+      font-size: 28px;
+   }
 
    .product-images{
       flex: 1;
@@ -775,7 +795,7 @@
       display: flex;
       flex-direction: column;
       gap: 40px;
-      width: 75%;
+      width: 85%;
       margin-top: 20px;
       margin-left: 100px;
    }
@@ -899,6 +919,9 @@
       margin-bottom: 80px;
    }
 
+   /* =============================================================================
+   Popup Card - Payment Detail Page
+   ============================================================================= */
    .popup-overlay{
       position: fixed;
       top: 0;
@@ -912,17 +935,31 @@
       z-index: 1000;
   }
 
-  .popup-card{
-   width: 800px;
-   background-color: var(--neutral-color);
-   padding: 40px;
-   border-radius: 16px;
-   text-align: center;
-   box-shadow: 0 10px 30px var(--overlay-color);
-   display: flex;
-   flex-direction: column;
-   gap: 20px;
-}
+   .popup-card{
+      width: 800px;
+      background-color: var(--neutral-color);
+      padding: 40px; 
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 10px 30px var(--overlay-color);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+   }
+
+   .popup-card h1{
+      color: var(--branding-color);
+      align-items: flex-start;
+   }
+
+   form{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+   }
+
+
+
 
 
 
