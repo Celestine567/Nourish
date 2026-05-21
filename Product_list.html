@@ -29,9 +29,12 @@
       <a href="Homepage.html" title="nourish logo">Nourish</a>
     </div>
     <div class="nav-right">
-      <a href="Cart.html">
-        <img src="Assets/cart-white.png" alt="cart-icon">
-      </a>
+      <div class="cart-number">
+        <a href="Cart.html">
+          <img src="Assets/cart-white.png" alt="cart-icon">
+        </a>
+        <span id="cart-badge"></span>
+      </div>
       <img src="Assets/profile-white.png" alt="profile-icon">
     </div>
   </div>
@@ -65,14 +68,88 @@
     <section class="lattes-product">
       <h1>Lattes</h1>
     <div class="menu">
+
       <div class="product-card">
-          <img src="Assets/Activated Charcoal Latte.tiff" alt="Activated Charcoal Latte">
+        <img src="Assets/Activated Charcoal Latte.webp" alt="Activated Charcoal Latte">
+        <div class="product-details">
+          <h2><a href="Product_detail.html">Activated Charcoal Latte</a></h2>
+          <p>$14.5</p>
+          <button class="add-button" onclick="addToCart(this, 'q1')">
+            Add</button>
+          <div class="quantity-box-list" id="qty-q1">
+            <button onclick="decrease('q1')">-</button>
+            <span id="q1">1</span>
+            <button onclick="increase('q1')">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="Assets/Beetroot Latte.webp" alt="Beetroot Latte">
+        <div class="product-details">
+          <h2><a href="Product_detail.html">Beetroot Latte</a></h2>
+          <p>$14.5</p>
+          <button class="add-button" onclick="addToCart(this, 'q2')">
+            Add</button>
+          <div class="quantity-box-list" id="qty-q2">
+            <button onclick="decrease('q2')">-</button>
+            <span id="q2">1</span>
+            <button onclick="increase('q2')">+</button>
+          </div>
+        </div>
+      </div>
+
+      
+
+        <div class="product-card">
+          <img src="Assets/Butterfly Pea Blue Matcha Latte.webp" alt="Butterfly Pea Blue Matcha Latte">
           <div class="product-details">
-            <h2>Activated Charcoal Latte</h2>
+            <h2>Butterfly Pea Blue Matcha Latte</h2>
             <p>$14.5</p>
             <a href="Product_detail.html" class="add-button">
               <span>Add</span>
             </a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="Assets/Matcha Latte.webp" alt="Matcha Latte">
+          <div class="product-details">
+            <h2>Matcha Latte</h2>
+            <p>$14.5</p>
+            <a href="Product_detail.html" class="add-button">
+              <span>Add</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="Assets/Sakura Cherry Blossom Latte .png"alt="Sakura Cherry Blossom Latte">
+          <div class="product-details">
+            <h2>Sakura Cherry Blossom Latte</h2>
+            <p>$14.5</p>
+            <a href="Product_detail.html" class="add-button">
+              <span>Add</span>
+            </a>
+          </div>
+        </div>
+    </section>
+
+    <section class="lattes-product">
+      <h1>Smoothie</h1>
+    <div class="menu">
+      <div class="product-card">
+          <img src="Assets/Activated Charcoal Latte.tiff" alt="Activated Charcoal Latte">
+          <div class="product-details">
+            <h2><a href="Product_detail.html">Activated Charcoal Latte</a></h2>
+            <p>$14.5</p>
+            <button class="add-button" onclick="addToCart(this, 'q1')">
+              Add</button>
+            <div class="quantity-box-list" id="qty-q1">
+              <button onclick="decrease('q1')">-</button>
+              <span id="q1">1</span>
+              <button onclick="increase('q1')">+</button>
+            </div>
           </div>
         </div>
 
@@ -119,8 +196,53 @@
             </a>
           </div>
         </div>
+    </div>
     </section>
 
   </main>
+
+  <script>
+    const cartItems = new Set();  
+  
+    function addToCart(btn, id) {
+      btn.style.display = 'none';
+      const box = document.getElementById('qty-' + id);
+      box.style.display = 'flex';
+      document.getElementById(id).textContent = 1;
+      cartItems.add(id);       
+      updateCartBadge();
+    }
+  
+    function increase(id) {
+      const el = document.getElementById(id);
+      el.textContent = parseInt(el.textContent) + 1;
+    }
+  
+    function decrease(id) {
+      const el = document.getElementById(id);
+      const current = parseInt(el.textContent);
+  
+      if (current <= 1) {
+        const box = document.getElementById('qty-' + id);
+        box.style.display = 'none';
+        box.previousElementSibling.style.display = '';
+        cartItems.delete(id);     
+        updateCartBadge();
+      } else {
+        el.textContent = current - 1;
+      }
+    }
+  
+    function updateCartBadge() {
+      const badge = document.getElementById('cart-badge');
+      const count = cartItems.size;
+      if (count > 0) {
+        badge.textContent = count;
+        badge.style.display = 'flex';
+      } else {
+        badge.style.display = 'none';
+      }
+    }
+  </script>
 </body>
 </html>

@@ -33,7 +33,7 @@
     </div>
   </div>
 
-    <div class="Subheader">
+    <div class="subheader">
       <div class="category-nav-sticky">
         <nav class="category-navbar">
           <ul class="nav-pill">
@@ -49,7 +49,17 @@
   </header>
 
   <main class="product-page">
+    <!-- Product Image -->
+    <div class="product-images">
+      <a class="arrow-btn" id="arrow-last">&#10094</a>
+      <img src="Assets/Activated Charcoal Latte.png" alt="Activated Charcoal Latte"> 
+      <a class="arrow-btn" id="arrow-last">&#10095</a>
+   </div>
+
     <div class="product-content">
+      <a href="Product_list.html" class="back-button">
+        <img src="Assets/back.png" alt="back-icon">
+      </a>
       <div class="product-info">
         <h1>Beetroot Latte</h1>
         <h2>$7.00</h2>
@@ -61,15 +71,15 @@
           <h2>Size</h2>
           <div class="option-card">
             <label class="option">
-              <input type="radio" name="size" value="small">
+              <input type="radio" name="size" value="small" required>
               Small<br> $7.00
             </label>
             <label class="option">
-              <input type="radio" name="size" value="medium">
+              <input type="radio" name="size" value="medium" required>
               Medium<br> $8.00
             </label>
             <label class="option">
-              <input type="radio" name="size" value="large">
+              <input type="radio" name="size" value="large" required>
               Large<br> $9.00
             </label>
           </div>
@@ -79,33 +89,28 @@
             <h2>Milk</h2>
             <div class="option-card">
               <label class="option">
-                <input type="radio" name="size" value="small">
+                <input type="radio" name="milk" value="small" required>
                 Regular<br> $0.00
               </label>
               <label class="option">
-                <input type="radio" name="size" value="small">
+                <input type="radio" name="milk" value="small" required>
                 Oat<br> $0.50
               </label>
             </div>
           </div>
         </div>
-      
+
+
       <div class="place-button">
         <a href="Cart.html">
           Place Order
         </a>
-        <!-- price
-        <div class="total-price">
-          <p>$8.00</p>
-        </div>-->
       </div>
+    
     </div>
        
 
-  <!-- Product Image -->
-    <div class="product-images">
-      <img src="Assets/Activated Charcoal Latte.tiff" alt=""> 
-   </div>
+  
   </main>
 
     <section class="image-slider">
