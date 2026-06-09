@@ -38,62 +38,34 @@
     <!-- Cart header section -->
     <section class="cart-header">
       <h1>The Shopping Cart</h1>
-      <p>Total X Items</p>
+      <p id="item-count">Total 0 Items</p>
       <span class="line-cart"></span>
     </section>
 
     <!-- Cart item container-->
-    <!-- 1 -->
-    <div class="cart-item">
-      <img src="Assets/Butterfly Pea Blue Matcha Latte.webp" alt="Butterfly Pea Blue Matcha Latte">
-      <div class="item-info">
-        <h2>Butterfly Pea Blue Matcha Latte</h2>
-        <div class="quantity-box">
-          <button onclick="decrease('q1')">-</button>
-          <span id="q1">1</span>
-          <button onclick="increase('q1')">+</button>
-        </div>
-        <p>$8.00</p>
-      </div>
-
-      <button class="select-btn" onclick="toggleSelect(this)">
-      </button>
+    <div id="cart-items-container"></div>
+    <div id="empty-cart" style="display:none; text-align:center; padding: 40px 0;">
+      <p>Your cart is empty</p>
     </div>
-
-    <!-- 2 -->
-    <div class="cart-item">
-      <img src="Assets/smoothie.webp" alt="smoothie">
-      <div class="item-info">
-        <h2>Cleanest Green Smoothie</h2>
-        <div class="quantity-box">
-          <button onclick="decrease('q1')">-</button>
-          <span id="q1">1</span>
-          <button onclick="increase('q1')">+</button>
-        </div>
-        <p>$13.00</p>
-      </div>
-
-        <button class="select-btn" onclick="toggleSelect(this)">
-        </button>
-      </div>
+    
 
       <!-- Summary -->
       <div class="summary">
         <div class="summary-row">
           <p>price</p>
-          <P>$21.00</P>
+          <P id="subtotal">$0.00</P>
         </div>
 
         <div class="summary-row">
           <p>GST</p>
-          <P>$0.26</P>
+          <P id="gst">$0.26</P>
         </div>
       </div>
 
       <!-- Total  -->
        <div class="total-row">
         <h2>Total</h2>
-        <h2>$21.26</h2>
+        <h2 id="total">$0.00</h2>
        </div>
 
        <!-- Button  -->
@@ -102,7 +74,7 @@
        </button>
   </main>
 
-  <!-- Overlay card  -->
+  <!-- Popoup payment card  -->
   <div class="popup-overlay" id="popup">
     <div class="popup-card">
       <h1>Payment Details</h1>
@@ -121,7 +93,7 @@
         <div class="row">
           <div class="payment-input">
             <label>CVV</label>
-            <input type="text" id="security-code" inputmode="numeric" minlength="3" maxlength="4" pattern="[0-9]+" placeholder="123">
+            <input type="number" id="security-code" inputmode="numeric" minlength="3" maxlength="4" pattern="[0-9]+" placeholder="123">
           </div>
   
           <div class="payment-input">
@@ -159,42 +131,16 @@
       </form>
 
       <!-- Button  -->
-      <button class="place-order">
+      <button class="place-order-pay" onclick="openSuccess()">
         Place Order
        </button>
 
-       
-      
+    
 
     </div>
   </div>
-  <script>
-    /* product quantity */
-    function increase(id){
-      let qty = document.getElementById(id);
-      let current = Number(qty.innerText);
-      qty.innerText = current + 1;
-    }
-
-    function decrease(id){
-      let qty = document.getElementById(id);
-      let current = Number(qty.innerText);
-      if(current > 1){
-        qty.innerText = current - 1;
-      }
-    }
-
-    /* Select button */
-    function toggleSelect(button){
-      button.classList.toggle('active');
-    }
-
-    /* popup card */
-    function openPopup(){
-      document.getElementById('popup').style.display='flex';
-    }
-
-  </script>
+  <script src="shared.js"></script>
+  <script src="Javascript.js"></script>
 </body>
 </html>
 

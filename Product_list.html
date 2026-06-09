@@ -100,7 +100,7 @@
       </div>
 
       
-
+<!-- Top sticky banner:  
         <div class="product-card">
           <img src="Assets/Butterfly Pea Blue Matcha Latte.webp" alt="Butterfly Pea Blue Matcha Latte">
           <div class="product-details">
@@ -198,51 +198,16 @@
         </div>
     </div>
     </section>
+-->
+    <section>
+      <button class="viewCart">
+        View Cart
+      </button>
+    </section>
 
   </main>
 
-  <script>
-    const cartItems = new Set();  
-  
-    function addToCart(btn, id) {
-      btn.style.display = 'none';
-      const box = document.getElementById('qty-' + id);
-      box.style.display = 'flex';
-      document.getElementById(id).textContent = 1;
-      cartItems.add(id);       
-      updateCartBadge();
-    }
-  
-    function increase(id) {
-      const el = document.getElementById(id);
-      el.textContent = parseInt(el.textContent) + 1;
-    }
-  
-    function decrease(id) {
-      const el = document.getElementById(id);
-      const current = parseInt(el.textContent);
-  
-      if (current <= 1) {
-        const box = document.getElementById('qty-' + id);
-        box.style.display = 'none';
-        box.previousElementSibling.style.display = '';
-        cartItems.delete(id);     
-        updateCartBadge();
-      } else {
-        el.textContent = current - 1;
-      }
-    }
-  
-    function updateCartBadge() {
-      const badge = document.getElementById('cart-badge');
-      const count = cartItems.size;
-      if (count > 0) {
-        badge.textContent = count;
-        badge.style.display = 'flex';
-      } else {
-        badge.style.display = 'none';
-      }
-    }
-  </script>
+<script src="shared.js"></script>
+<script src="Javascript.js"></script>
 </body>
 </html>
