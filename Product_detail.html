@@ -21,14 +21,17 @@
       <a>Menu</a>
       <a>Find us</a>
       <a>Catering</a>
-  </div>
+    </div>
     <div class="logo">
       <a href="Homepage.html" title="nourish logo">Nourish</a>
     </div>
     <div class="nav-right">
-      <a href="Cart.html">
-        <img src="Assets/cart-white.png" alt="cart-icon">
-      </a>
+      <div class="cart-number">
+        <a href="Cart.html">
+          <img src="Assets/cart-white.png" alt="cart-icon">
+        </a>
+        <span id="cart-badge"></span>
+      </div>
       <img src="Assets/profile-white.png" alt="profile-icon">
     </div>
   </div>
@@ -62,7 +65,17 @@
       </a>
       <div class="product-info">
         <h1>Beetroot Latte</h1>
-        <h2>$7.00</h2>
+        <div class="price-row">
+          <h2>$7.00</h2>
+          <button class="plus-btn" onclick="addToCart(this,'q3')">+</button>
+          <div class="quantity-box-list" id="qty-q3">
+            <button onclick="decrease('q3')">-</button>
+            <span id="q3">1</span>
+            <button onclick="increase('q3')">+</button>
+          </div>
+        </div>
+        
+
         <p>Nourish is where healthy eating starts. We have a passion for bringing you the freshest salads.</p>
       </div>
 
@@ -103,13 +116,12 @@
 
       <div class="place-button">
         <a href="Cart.html">
-          Place Order
+          View Cart
         </a>
       </div>
     
     </div>
        
-
   
   </main>
 
@@ -120,9 +132,8 @@
       <img src="" alt="">
     </section>
   
-    <script>
-    
-    </script>
+    <script src="shared.js"></script>
+    <script src="Javascript.js"></script>
 
 </body>
 </html>

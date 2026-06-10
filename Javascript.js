@@ -187,11 +187,16 @@ function toggleSelect(button){
 /* ========= Payment ========= */
 /* payment detai popup card */
 function openPopup(){
-  document.getElementById('popup').style.display='flex';
+  document.getElementById('popup').classList.add('active');
 }
 
-/* payment comfirmation popup card */
-function openSuccess() {
-  document.getElementById('popup').classList.remove('active');
-  document.getElementById('popup-success').classList.add('active');
+function handlePayment(event) {
+  event.preventDefault();
+  localStorage.removeItem('cart');  
+  window.location.href = 'PaymentDone.html';
+}
+
+/* ========= Menu adaptation ========= */
+function toggleMenu(){
+  document.querySelector(".nav-right").classList.toggle("show");
 }

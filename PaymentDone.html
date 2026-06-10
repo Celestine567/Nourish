@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PaymentDone</title>
+   <!-- Load Elsie Font:  -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Elsie:wght@400;900&display=swap" rel="stylesheet">
+    <!-- Load Open Sans:  -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+   <!-- Load Cream Cake Font:  -->
+   <link href="https://fonts.cdnfonts.com/css/mervale-script" rel="stylesheet">          
+   <!-- Load stylesheet:  -->
+   <link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+  <!-- Popoup payment done card  -->
+  <div class="popup-overlay active" id="popup-success">
+    <div class="success-card">
+      <div class="success-icon">
+      </div>
+      <h1>Payment success!</h1>
+      <p>Your payment has been successfully done.</p>
+  
+      <div class="success-grid">
+        <div class="success-info-box">
+          <span class="info-label">Ref number</span>
+          <span class="info-value" id="success-ref"></span>
+        </div>
+        <div class="success-info-box">
+          <span class="info-label">Payment Time</span>
+          <span class="info-value" id="success-time"></span>
+        </div>
+        <div class="success-info-box">
+          <span class="info-label">Payment method</span>
+          <span class="info-value">Bank Card</span>
+        </div>
+        <div class="success-info-box">
+          <span class="info-label">Account Number</span>
+          <span class="info-value" id="success-account"></span>
+        </div>
+      </div>
+  
+      <div class="dash-line"></div>
+  
+      <p class="success-total-label">Total payment</p>
+      <p class="success-total-amount" id="success-total"></p>
+      <button class="paymentDone-btn">Done</button>
+    </div>
+  </div>
+  
+</body>
+</html>

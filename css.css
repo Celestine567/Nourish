@@ -18,6 +18,7 @@
       --branding-color: rgb(175, 80, 113);
       --filling-box:rgb(175, 80, 113, 0.7);
       --overlay-color:rgb(106,49,68);
+      --alarm-color:rgb(255, 0, 0);
    }
 
 /* =============================================================================
@@ -46,6 +47,40 @@
       font-size: 20px;
       font-weight: normal;
    }
+
+   /* =============================================================================
+   Adaptation
+   ============================================================================= */
+   @media (max-width: 768px){
+      .main-header{
+         padding: 12px 16px;
+      }
+
+      .dropdown{
+         display: flex;
+         flex-direction: column;
+         gap: 5px;
+         cursor: pointer;
+         background: none;
+         border: none;
+         padding: 4px;
+         z-index: 10;
+      }
+
+      .dropdown img{
+         width: 25px;
+         height: 25px;
+         object-fit: contain;
+      }
+
+
+      @media (min-width: 481px) {
+         .hamburger {
+            display: none;
+         }
+   }
+}
+
 
 /* =============================================================================
    NAVIGATION & BANNER
@@ -164,10 +199,10 @@
       position: relative;
     }
 
-    .pill-indicator{
+   .pill-indicator{
       position: absolute;
       background: var(--accent-color);
-    }
+   }
 
    /* =============================================================================
    FOOTER
@@ -304,12 +339,10 @@
       border: 2px solid var(--accent-color);
    }
 
-   
+   #empty-cart a:hover {
+      border: 2px solid var(--accent-color);
+  }
 
-   /* =============================================================================
-   Responsive
-   ============================================================================= */
-   
    /* =============================================================================
    Search Section
    ============================================================================= */ 
@@ -508,15 +541,6 @@
       font-family: “Mervale Script”, cursive;
    }
 
-   @keyframes scroll {
-      from {
-        transform: translateX(0);
-      }
-      to {
-        transform: translateX(-50%);
-      }
-    }
-
     /* ========= Search categories ========= */
     .categories-home{
       display: flex;
@@ -706,6 +730,11 @@
       text-decoration: none;
       border: 2px solid transparent;
       font-family: inherit;
+   }
+
+   .add-button a{
+      text-decoration: none;
+      color: inherit;
    }
 
    .quantity-box-list{
@@ -921,6 +950,58 @@
       }
    }
 
+   .price-row {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      min-height: 50px;
+   }
+  
+   .plus-btn {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      margin-left: auto;
+      flex-shrink: 0;
+      border: 2px solid transparent;
+      border-radius: 999px;
+      background: var(--neutral-color);
+      color: var(--branding-color);
+      font-size: 24px;
+      line-height: 1;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .plus-btn:hover{
+      border: 2px solid var(--accent-color);
+   }
+
+   .price-row .quantity-box-list {
+      display: none;
+      align-items: center;
+      gap: 10px;
+      margin-left: auto;
+      flex-shrink: 0;
+      min-width: 100px;
+      background-color: var(--neutral-color);
+      color: var(--branding-color);
+      border-radius: 999px;
+      border: 2px solid var(--accent-color);
+      padding: 4px 12px;
+   }
+    
+   .price-row .quantity-box-list button {
+      border: none;
+      background: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: var(--branding-color);
+   }
+  
+
    /* =============================================================================
    Cart Page
    ============================================================================= */
@@ -1052,6 +1133,23 @@
       margin-bottom: 80px;
    }
 
+   #empty-cart{
+      text-align: center;
+      padding: 60px 0;
+   }
+
+   #empty-cart a{
+      display: inline-block;
+      margin-top: 16px;
+      background: var(--neutral-color);
+      color: var(--branding-color);
+      padding: 18px 40px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 28px;
+      border: 2px solid transparent;
+   }
+
    /* =============================================================================
    Popup Card - Payment Detail Page
    ============================================================================= */
@@ -1135,6 +1233,11 @@
       background-color: var(--neutral-color);
    }
 
+   .payment-input input:invalid:not(:placeholder-shown),
+   .payment-input select:invalid {
+      border: 2px solid var(--alarm-color);
+   }
+
    .row {
       display: flex;
       gap: 20px;
@@ -1159,6 +1262,112 @@
    .place-order-pay:hover{
       border: 2px solid var(--accent-color);
    }
+
+   /* =============================================================================
+   Popup Card - Payment Done Page
+   ============================================================================= */
+   .success-card {
+      width: 380px;
+      max-width: 92vw;
+      background-color: var(--neutral-color);
+      border-radius: 20px;
+      padding: 40px 30px 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      text-align: center;
+      position: relative;
+   }
+    
+   .success-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+    
+   .success-card h1 {
+      color: var(--branding-color);
+      font-size: 32px;
+      margin: 0;
+   }
+    
+   .success-card p {
+      color: var(--branding-color);
+      font-size: 16px;
+      margin: 0;
+      opacity: 0.8;
+   }
+    
+   .success-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      width: 100%;
+      margin-top: 8px;
+   }
+    
+   .success-info-box {
+      border: 1.5px solid var(--branding-color);
+      border-radius: 10px;
+      padding: 14px 16px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+   }
+    
+   .info-label {
+      font-size: 14px;
+      color: var(--branding-color);
+      opacity: 0.7;
+   }
+    
+   .info-value {
+      font-size: 16px;
+      color: var(--branding-color);
+      font-weight: bold;
+      word-break: break-all;
+   }
+
+   .dash-line{
+      width: 100%;
+      border: none;
+      border-top: 2px dashed var(--branding-color);
+      margin: 8px 0;
+   }
+    
+   .success-total-label {
+      font-size: 28px;
+      color: var(--branding-color);
+      margin: 0;
+   }
+    
+   .success-total-amount {
+      font-size: 40px;
+      color: var(--branding-color);
+      margin: 0;
+      font-weight: bold;
+   }
+    
+   .paymentDone-btn {
+      width: 100%;
+      padding: 18px;
+      background-color: var(--branding-color);
+      color: var(--neutral-color);
+      border: none;
+      border-radius: 10px;
+      font-size: 28px;
+      font-family: 'Elsie', serif;
+      cursor: pointer;
+      margin-top: 8px;
+   }
+    
+
    
 
 
