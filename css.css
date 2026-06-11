@@ -190,6 +190,7 @@
    .newsletter{
       flex: 1;
       min-width: 280px;
+      
    }
 
    .newsletter h1{
@@ -198,8 +199,10 @@
 
    .subscribe{
       display: flex;
-      align-items: center;
-      max-width: 320px;
+      align-items:flex-start;
+      flex-direction: row;
+      max-width: 400px;
+      flex-wrap: nowrap;
    }
 
    .subscribe input{
@@ -210,6 +213,7 @@
       outline: none;
       padding: 10px 0;
       font-size: 14px;
+      min-width: 0;
    }
 
    .subscribe input::placeholder{
@@ -225,6 +229,7 @@
       padding: 7px 20px;
       border: 1px solid var(--branding-color);
       cursor: pointer;
+      white-space: nowrap;
    }
 
    /* ========= Right Side - Nourish ========= */
@@ -253,11 +258,9 @@
       display: flex;
       gap: 20px;
       font-size: 20px;
-      margin-top: 45px;
-
    }
 
-   .footer-location a{
+   .footer-location p{
       color: var(--branding-color);
    }
 
@@ -318,7 +321,7 @@
    ============================================================================= */ 
    .search-section{
       text-align: center;
-      padding: 60px 20px;
+      padding: 0px 20px;
       margin-top: 100px;
       font-family: 'Elsie', serif;
       color: var(--neutral-color);
@@ -344,7 +347,7 @@
     }
 
     .search-box input{
-      width: 80%;
+      width: 85%;
       max-width: 1200px;
       padding: 15px 20px 15px 20px;
       margin-bottom: 0px;
@@ -367,7 +370,7 @@
 
     .search-box button{
       position: absolute;
-      right: 10.5%;
+      right: 8.5%;
       width: 45px;
       height: 45px;
       border-radius: 50%;
@@ -390,19 +393,16 @@
       position: relative;
       width: 100%;
       aspect-ratio: 1.5 / 1;  
-      overflow: hidden;
    }
 
    .hero img{
       position: absolute;
       top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      left: 10%;
+      width: 80%;
+      height: 80%;
       margin-top: 100px;
-      margin-bottom: 100px;
       object-fit: cover;
-      z-index: 0;
    }
 
     /* ========= Overlay text ========= */
@@ -417,24 +417,24 @@
    }
 
    .overlay1{
-      font-size: 64px;
-      transform: translate(-120px, -160px);
+      font-size: 80px;
+      transform: translate(-120px, -280px);
    }
 
    .overlay2{
-      font-size: 80px;
+      font-size: 120px;
       font-weight: bold;
-      transform: translate(-300px, -100px);
+      transform: translate(-400px, -230px);
    }
 
    .overlay3{
-      font-size: 48px;
-      transform: translate(150px, 50px);
+      font-size: 80px;
+      transform: translate(150px, -80px);
    }
 
    .overlay4{
-      font-size: 80px;
-      transform: translate(-250px, 100px);
+      font-size: 120px;
+      transform: translate(-200px, -40px);
    }
 
    .hero a{
@@ -451,7 +451,6 @@
    .start-button{
       display: flex;
       justify-content: center;
-      margin-top: 100px;
       text-decoration: none;
    }
    
@@ -536,7 +535,7 @@
 
     /* ========= Gallery section ========= */
     .gallery{
-      padding: 60px 120px;
+      padding: 0px 120px;
       color: var(--neutral-color);
     }
 
@@ -568,6 +567,7 @@
      /* ========= Location section ========= */
      .location{
       padding: 60px 120px;
+      box-sizing: border-box;
      }
 
      .location h1{
@@ -575,17 +575,23 @@
       margin-top: 30px;
      }
 
+     .location h3{
+      color: var(--branding-color);
+      font-weight: bold;
+      margin-bottom: 0px;
+     }
+
      .location-cards{
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
+      gap: 46px;
+      justify-content: flex-start;
       }
 
      .location-cards > div{
       position: relative;
-      width: 200px;
-      height: 450px;
+      width: 230px;
+      height: 520px;
       border: 2px solid var(--accent-color);
       border-radius: 12px;
       padding: 15px;
@@ -597,8 +603,8 @@
      .location-cards p{
       color: var(--branding-color);
       font-family: 'Open Sans', sans-serif;
-      margin-top: 30px;
       padding: 15px;
+      font-size: 20px;
      }
 
      .heart{
@@ -624,7 +630,7 @@
    }
 
    .lattes-product{
-      padding: 100px;
+      padding: 20px 100px;
     }
 
    .lattes-product h1{
@@ -1342,7 +1348,8 @@
       h1{font-size: 32px;}
       h2{font-size: 28px;}
       h3{font-size: 20px;}
-      h4{font-size: 14px;}
+      {font-size: 14px;}
+
    
       /* header menu */
       .dropdown{
@@ -1442,9 +1449,33 @@
          justify-content: center;
          text-decoration: none;
       }
+      .crawling-text{
+    
+      }
+/* ========= crawling text ========= */
+.crawling-text{
+   width: 100%;
+   margin-top: 100px;
+   overflow: hidden;
+   box-sizing: border-box;
+   border-top: 2px solid var(--neutral-color);
+   border-bottom: 2px solid var(--neutral-color);
+}
 
+.track{
+   display: inline-flex;
+   white-space: nowrap;
+   animation: scroll 35s linear infinite;
+}
+
+.track p{
+   white-space: nowrap;
+   padding-right: 10px;
+   letter-spacing: 1.5px;
+   color: var(--neutral-color);
+   font-family: “Mervale Script”, cursive;
+}
    }
-   
    
    /* there is laptop version 1440 X 1024px */
    @media (min-width: 481px) {

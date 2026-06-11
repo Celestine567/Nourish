@@ -10,7 +10,6 @@ function toggleHeart(heart){
   }   
 }
 
-
 /* ========= PRODUCT LIST  ========= */
 function initPage() {
   const cart = getCart();
@@ -89,7 +88,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initPage();
   }
 });
-
 
 /* ========= CART  ========= */
 function renderCart() {
