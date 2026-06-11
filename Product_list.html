@@ -20,24 +20,24 @@
   <!-- Top sticky banner:  -->
   <header> 
     <div class="main-header">
-    <div class="nav-left">
-      <a>Menu</a>
-      <a>Find us</a>
-      <a>Catering</a>
-  </div>
-    <div class="logo">
-      <a href="Homepage.html" title="nourish logo">Nourish</a>
-    </div>
-    <div class="nav-right">
-      <div class="cart-number">
-        <a href="Cart.html">
-          <img src="Assets/cart-white.png" alt="cart-icon">
-        </a>
-        <span id="cart-badge"></span>
+      <button class="dropdown" onclick="toggleMenu()">
+        <img src="Assets/menu-purple.png">
+      </button>
+      <div class="nav-left">
+        <a>Menu</a>
+        <a>Find Us</a>
+        <a>Catering</a>
       </div>
-      <img src="Assets/profile-white.png" alt="profile-icon">
+      <div class="logo">
+        <a href="Homepage.html" title="nourish logo">Nourish</a>
+      </div>
+      <div class="nav-right">
+        <a href="Cart.html">
+          <img src="Assets/cart-purple.png" alt="cart-icon">
+        </a>
+        <img src="Assets/profile-purple.png" alt="profile-icon">
+      </div>
     </div>
-  </div>
 
     <div class="subheader">
       <div class="category-nav-sticky"></div>
@@ -73,7 +73,7 @@
         <img src="Assets/Activated Charcoal Latte.webp" alt="Activated Charcoal Latte">
         <div class="product-details">
           <h2>Activated Charcoal Latte</h2>
-          <p>$14.5</p>
+          <p>$8.00</p>
           <button class="add-button">
             <a href="Product_detail.html">Add</a>
           </button>
@@ -82,72 +82,41 @@
 
       <div class="product-card">
         <img src="Assets/Beetroot Latte.webp" alt="Beetroot Latte">
-        <div class="product-details">
-          <h2><a href="Product_detail.html">Beetroot Latte</a></h2>
-          <p>$14.5</p>
-          <button class="add-button" onclick="addToCart(this, 'q2')">
-            Add</button>
-          <div class="quantity-box-list" id="qty-q2">
-            <button onclick="decrease('q2')">-</button>
-            <span id="q2">1</span>
-            <button onclick="increase('q2')">+</button>
-          </div>
+        <div class="Beetroot Latte">
+          <h2>Beetroot Latte</h2>
+          <p>$8.00</p>
+          <button class="add-button">
+            <a href="Product_detail.html">Add</a>
+          </button>
         </div>
       </div>
 
-
-        <div class="product-card">
-          <img src="Assets/Butterfly Pea Blue Matcha Latte.webp" alt="Butterfly Pea Blue Matcha Latte">
-          <div class="product-details">
-            <h2>Butterfly Pea Blue Matcha Latte</h2>
-            <p>$14.5</p>
-            <a href="Product_detail.html" class="add-button">
-              <span>Add</span>
-            </a>
-          </div>
+      <div class="product-card">
+        <img src="Assets/Butterfly Pea Blue Matcha Latte.webp" alt="Butterfly Pea Blue Matcha">
+        <div class="product-details">
+          <h2>Butterfly Pea Blue Matcha</h2>
+          <p>$8.00</p>
+          <button class="add-button">
+            <a href="Product_detail.html">Add</a>
+          </button>
         </div>
+      </div>
 
-        <div class="product-card">
-          <img src="Assets/Matcha Latte.webp" alt="Matcha Latte">
-          <div class="product-details">
-            <h2>Matcha Latte</h2>
-            <p>$14.5</p>
-            <a href="Product_detail.html" class="add-button">
-              <span>Add</span>
-            </a>
-          </div>
+      <div class="product-card">
+        <img src="Assets/Matcha Latte.webp" alt="Matcha Latte">
+        <div class="Matcha Latte">
+          <h2>Matcha Latte</h2>
+          <p>$8.00</p>
+          <button class="add-button">
+            <a href="Product_detail.html">Add</a>
+          </button>
         </div>
-
-        <div class="product-card">
-          <img src="Assets/Sakura Cherry Blossom Latte .png"alt="Sakura Cherry Blossom Latte">
-          <div class="product-details">
-            <h2>Sakura Cherry Blossom Latte</h2>
-            <p>$14.5</p>
-            <a href="Product_detail.html" class="add-button">
-              <span>Add</span>
-            </a>
-          </div>
-        </div>
+      </div>
     </section>
 
     <section class="lattes-product">
       <h1>Smoothie</h1>
     <div class="menu">
-      <div class="product-card">
-          <img src="Assets/Activated Charcoal Latte.tiff" alt="Activated Charcoal Latte">
-          <div class="product-details">
-            <h2><a href="Product_detail.html">Activated Charcoal Latte</a></h2>
-            <p>$14.5</p>
-            <button class="add-button" onclick="addToCart(this, 'q1')">
-              Add</button>
-            <div class="quantity-box-list" id="qty-q1">
-              <button onclick="decrease('q1')">-</button>
-              <span id="q1">1</span>
-              <button onclick="increase('q1')">+</button>
-            </div>
-          </div>
-        </div>
-
         <div class="product-card">
           <img src="Assets/Beetroot Latte.webp" alt="Beetroot Latte">
           <div class="product-details">
@@ -193,13 +162,6 @@
         </div>
     </div>
     </section>
-
-    <section>
-      <button class="viewCart">
-        View Cart
-      </button>
-    </section>
-
   </main>
 
 <script src="shared.js"></script>
