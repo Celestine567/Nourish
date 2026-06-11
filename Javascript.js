@@ -198,5 +198,5 @@ function handlePayment(event) {
 
 /* ========= Menu adaptation ========= */
 function toggleMenu(){
-  document.querySelector(".nav-right").classList.toggle("show");
+  document.querySelector(".nav-left").classList.toggle("show");
 }

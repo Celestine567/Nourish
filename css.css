@@ -1,6 +1,10 @@
 /* =============================================================================
    GLOBAL STYLES & VARIABLES
    ============================================================================= */
+   html{
+      overflow-x: hidden;
+      width: 100%;
+   }
    body{
      font-family: 'Elsie', serif;
      background-color: var(--branding-color);
@@ -48,40 +52,6 @@
       font-weight: normal;
    }
 
-   /* =============================================================================
-   Adaptation
-   ============================================================================= */
-   @media (max-width: 768px){
-      .main-header{
-         padding: 12px 16px;
-      }
-
-      .dropdown{
-         display: flex;
-         flex-direction: column;
-         gap: 5px;
-         cursor: pointer;
-         background: none;
-         border: none;
-         padding: 4px;
-         z-index: 10;
-      }
-
-      .dropdown img{
-         width: 25px;
-         height: 25px;
-         object-fit: contain;
-      }
-
-
-      @media (min-width: 481px) {
-         .hamburger {
-            display: none;
-         }
-   }
-}
-
-
 /* =============================================================================
    NAVIGATION & BANNER
    ============================================================================= */
@@ -102,7 +72,7 @@
       border-bottom: 1.5px solid var(--branding-color);
    }
 
-   .product.main-header{
+   .product .main-header{
       background-color: var(--neutral-color);
       color: var(--branding-color);
       border-bottom: 1.5px solid var(--branding-color);
@@ -112,6 +82,7 @@
    .main-header{
       background-color: var(--branding-color);
       color: var(--neutral-color);
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -127,7 +98,6 @@
       object-fit: contain;
    }
 
-   .nav-left,
    .nav-right{
       display: flex;
       gap: 20px;
@@ -411,9 +381,6 @@
       height: 30px;
       margin-top: 4px;
     }
-
-    
-
    /* =============================================================================
    Homepage
    ============================================================================= */
@@ -421,11 +388,9 @@
    .hero{
       background-color: var(--branding-color) ;
       position: relative;
-      padding: 300px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 40px;
+      width: 100%;
+      aspect-ratio: 1.5 / 1;  
+      overflow: hidden;
    }
 
    .hero img{
@@ -486,7 +451,7 @@
    .start-button{
       display: flex;
       justify-content: center;
-      margin-top: 180px;
+      margin-top: 100px;
       text-decoration: none;
    }
    
@@ -1367,6 +1332,131 @@
       margin-top: 8px;
    }
     
+
+   /* =============================================================================
+   Adaptation
+   ============================================================================= */
+    /* there is mobile version 390 X 844px */
+    @media (max-width: 480px){
+      /* typography */
+      h1{font-size: 32px;}
+      h2{font-size: 28px;}
+      h3{font-size: 20px;}
+      h4{font-size: 14px;}
+   
+      /* header menu */
+      .dropdown{
+         display: flex;
+         flex-direction: column;
+         gap: 5px;
+         cursor: pointer;
+         background: none;
+         border: none;
+         padding: 4px;
+         z-index: 10;
+      }
+
+      .dropdown img{
+         width: 25px;
+         height: 25px;
+         object-fit: contain;
+      }
+
+      .dropdown {
+         display: block;
+      }
+      
+      .nav-left{
+         display: none;
+      }
+
+      .nav-left.show{
+         display: flex;
+         flex-direction: column;
+         position:absolute;
+         top:100%;
+         left:0;
+         width:100%;
+         padding:20px;
+         z-index: 999;
+      }
+
+      /*  Hero section  */
+      .hero{
+         position: relative;
+         box-sizing: border-box;
+         overflow: hidden;
+         padding-top: 100%;
+         aspect-ratio: 16/9;
+         margin-top: 90px;
+         margin-left: 30px;
+         justify-content: center;
+         align-items: center;
+         width: 100%;
+         display: flex;
+      }
+   
+      .hero img{
+         position: absolute;
+         top: 0;
+         bottom: 0;
+         width: 330px;
+         height: 330px;
+         object-fit:cover;
+         margin: 0;
+      }
+   
+       /* ========= Overlay text ========= */
+      .overlay-text{
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         z-index: 1;
+      }
+   
+      .overlay1{
+         font-size: 36px;
+         transform: translate(-100px, -150px);
+      }
+   
+      .overlay2{
+         font-size: 48px;
+         font-weight: bold;
+         transform: translate(-180px, -120px);
+      }
+   
+      .overlay3{
+         font-size: 28px;
+         transform: translate(50px, -60px);
+      }
+   
+      .overlay4{
+         font-size: 48px;
+         transform: translate(-160px, -50px);
+      }
+   
+   
+      /* ========= Start Button ========= */
+      .start-button{
+         display: flex;
+         justify-content: center;
+         text-decoration: none;
+      }
+
+   }
+   
+   
+   /* there is laptop version 1440 X 1024px */
+   @media (min-width: 481px) {
+      .dropdown {
+         display: none;
+      }
+      
+      .nav-left{
+         display: flex;
+         gap: 20px;
+      }
+   }
 
    
 
