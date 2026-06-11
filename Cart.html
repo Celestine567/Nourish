@@ -18,17 +18,25 @@
 <body class="cart">
   <!-- Top sticky banner:  -->
   <header>
-      <div class="main-header">
+    <div class="main-header">
+      <button class="dropdown" onclick="toggleMenu()">
+        <img src="Assets/menu-purple.png">
+      </button>
       <div class="nav-left">
         <a>Menu</a>
-        <a>Find us</a>
+        <a>Find Us</a>
         <a>Catering</a>
-    </div>
+      </div>
       <div class="logo">
         <a href="index.html" title="nourish logo">Nourish</a>
       </div>
       <div class="nav-right">
-        <img src="Assets/cart-purple.png" alt="cart-icon">
+        <div class="cart-number">
+          <a href="Cart.html">
+            <img src="Assets/cart-purple.png" alt="cart-icon">
+          </a>
+          <span id="cart-badge"></span>
+        </div>
         <img src="Assets/profile-purple.png" alt="profile-icon">
       </div>
     </div>
